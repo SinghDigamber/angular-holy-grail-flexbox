@@ -1,0 +1,75 @@
+/* 
+// CSS3 Flexbox Holy Grail Layout
+// Made with ❤ by @ImDigamberSingh
+// http://www.positronx.io
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.container {
+  display:flex;
+  flex-flow:row wrap;
+}
+
+app-header, 
+app-nav, 
+app-main, 
+app-aside, 
+app-footer {
+  padding: 20px;
+  margin:5px;
+}
+
+app-header {
+  order:1;
+  height:100px;
+  flex:0 1 100%;
+  background: #f1b5b5;
+}
+
+app-nav {
+  order:2;
+  flex: 0 1 200px;
+  background: rgb(176, 165, 199);
+}
+
+app-main,
+app-privacy-policy {
+  order:3;
+  flex: 1;
+  min-height:500px;
+  background: rgb(211, 216, 215);
+}
+
+app-aside {
+  order:4;
+  flex:0 1 200px;
+  background: rgb(149, 180, 216);
+}
+
+app-footer {
+  order:5;
+  height:100px;
+  flex:0 1 100%;
+  background: rgb(119, 120, 121);
+}
+
+@media (max-width: 768px) {
+  app-header, 
+  app-nav, 
+  app-main, 
+  app-aside, 
+  app-footer {
+    flex: unset;
+    width: 100%;
+  }
+}
